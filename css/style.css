@@ -1,0 +1,50 @@
+* 
+
+h1 {
+   font-size: 4em;
+   text-align: center;
+   background-color: rgb(226, 139, 26);
+   padding: 12px;
+   width: 80%;
+   margin: auto;
+   margin-top: 50px;
+   color: rgb(248, 248, 246);
+   border-radius: 10px;
+   text-indent: 15px;
+   text-shadow: rgb(173, 170, 170);
+}
+footer {
+  text-align: center;
+  color: rgb(201, 184, 233);
+ 
+}
+p {
+  text-align: justify;
+  background: rgb(148, 93, 16);
+  padding: 12px;
+  width: 65%;
+  margin: auto;
+  margin-top: 50px;
+  color: rgb(241, 241, 237);
+  border-radius: 5px;
+}
+
+aside {
+  float: left;
+  text-align: center;
+  background: rgb(148, 93, 16);
+  padding: 12px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 30px;
+  color: rgb(241, 241, 237);
+  border-radius: 10px;
+}
+
+  
+
+ body {
+    background: rgb(90, 87, 141);
+    background: linear-gradient(90deg, rgb(54, 51, 126) 0%, 
+      rgb(73, 73, 172) 35%, rgb(0, 174, 255) 100%);
+  }
