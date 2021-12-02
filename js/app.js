@@ -32,7 +32,36 @@ alert('Yes. I don\'t recommend it.');
 let answerFive = prompt('Do I like music?')
 if (answerFive === 'yes' || answerFive === 'y');
       //console.log('Oh most definitely.');
-      alert('Oh most definitely. Thanks ' +user+ ' for stopping by.');
+      alert('Oh most definitely.');
 
+
+let attemptsRemain = 3;
+let indexCount = 0;
+
+let numGame = prompt(`${user}, what number am I thinking? You have four guesses.`);
+ for (let i = 0; i < 3; i++){
+       if (numGame !== 42){
+             alert('Please try again.');
+       }
+
+       if (numGame == 42){
+             alert('Bingo, you must have read my mind!')
+       }
+ }
+
+
+//while (let i = 0; i < 3 );{
+
+//alert('Bingo, you must have read my mind!');
+//alert('Please try again.');
+//}
+//let attempts = [0,1,2,3,4,5,6,]
+//for (let i = 0; i > attempts;){ 
+      
+//}
+
+
+      //console.log('You must have read my mind!');
+      //if (answerSix === '42');
 
 
