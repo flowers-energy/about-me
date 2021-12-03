@@ -45,7 +45,7 @@ p {
   border-radius: 5px;
 }
 
-aside {
+.aside {
   font-size: small;
   float: left;
   text-align: left;
@@ -82,8 +82,10 @@ article {
 
 ol {
   list-style-type: decimal;
+  color: azure;
 }
 
 ul {
   list-style-type: inside circle;
+  color: azure;
 }
