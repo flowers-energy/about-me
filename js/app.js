@@ -93,13 +93,19 @@ function guessGame() {
 
             } if (i == attemptsRemain) {
                   alert(`Sorry ${user}. You are out of attempts. The number I was thinking was 42.`);
-                  //break;
+                  
 
             }
       }
 }
 
 guessGame()
+
+function multGame() {
+
+}
+
+multGame()
 
 
 console.log(score);

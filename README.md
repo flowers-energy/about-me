@@ -10,3 +10,6 @@
 Indicates through an alert if the guess is “too high” or “too low”.
 It should give the user exactly four opportunities to get the correct answer.
 After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
+
+- Changed css colors for asides.
+- Worked on new function multGame.
