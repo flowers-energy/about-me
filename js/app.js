@@ -93,18 +93,45 @@ function guessGame() {
 
             } if (i == attemptsRemain) {
                   alert(`Sorry ${user}. You are out of attempts. The number I was thinking was 42.`);
-                  
+
 
             }
       }
 }
 
-guessGame()
+guessGame();
+
 
 function multGame() {
+      let attemptsRemain = 6;
+      let i;
+      for (i = 0; i <= attemptsRemain; i++) {
+            let multGame = prompt(`Okay ${user}, What musical note is representative of 440 hz?`).toUpperCase;
+            let notes = [`A`, `B`, `C`, `D`, `E`, `F`, `G`];
+            console.log(multGame);
 
+            if (multGame == notes[0]){
+                  alert(`Ahhh, that answer is like music to my ears.`);
+                  break;
+                  // } else if (multGame < notes[5]){
+                  //       alert(`Hmmm, that note is a little flat. Try again.`)
+                  //       score--;
+                  // } else if (multGame > notes[5]){
+                  //       alert(`That not is a little sharp. Try again.`)
+                  //       score--;
+
+
+
+
+
+            }
+
+
+
+
+
+      }
 }
-
 multGame()
 
 
