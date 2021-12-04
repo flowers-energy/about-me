@@ -13,127 +13,145 @@ let score = 7;
 
 
 // question one correct answer yes
-let answerOne = prompt('Did I serve in the military?').toLowerCase();
-if (answerOne === 'yes' || answerOne === 'y') {
-      //console.log('Yes, I did some time in the Navy.');
-      alert('Yes, I did some time in the Navy!');
-
-} else {
-      alert('Hmm I did serve in the navy.');
-      score--;
-}
-
-let answerTwo = prompt('Do I have a dog?').toLowerCase();
-if (answerTwo === 'yes' || answerTwo === 'y') {
-      //console.log('Indeed, her name is Phoebe.');
-      alert('Indeed, her name is Phoebe!');
-
-} else {
-      alert('Well I do have a dog and Phoebe is her name.');
-      score--;
+//console.log('Yes, I did some time in the Navy.');
+function answerOne() {
+  let answerOne = prompt('Did I serve in the military?').toLowerCase();
+  if (answerOne === 'yes' || answerOne === 'y') {
+    alert('Yes, I did some time in the Navy!');
+  } else {
+    alert('Hmm I did serve in the navy.');
+    score--;
+  }
 
 }
-let answerThree = prompt('Did I go to College?').toLowerCase();
-if (answerThree === 'yes' || answerThree === 'y') {
-      //console.log('Of course, I went to The Academy of Contemporary Music @ the University of Central Oklahoma. And yes, it is a mouthful.);
-      alert('Of course, I went to The Academy of Contemporary Music @ the University of Central Oklahoma. And yes, it is a mouthful.');
+answerOne();
 
-} else {
-      alert(`Nope, I am a learned individual.`);
-      score--;
+function answerTwo() {
+  let answerTwo = prompt('Do I have a dog?').toLowerCase();
+  if (answerTwo === 'yes' || answerTwo === 'y') {
+    //console.log('Indeed, her name is Phoebe.');
+    alert('Indeed, her name is Phoebe!');
+
+  } else {
+    alert('Well I do have a dog and Phoebe is her name.');
+    score--;
+
+  }
 }
 
-let answerFour = prompt('Did I live in Oklahoma?').toLowerCase();
-if (answerFour === 'yes' || answerFour === 'y') {
-      //console.log('Yes. I don't recommend it.');
-      alert('Yes. I don\'t recommend it.');
+answerTwo();
 
-} else {
-      alert(`Nope, I am sooner born and sooner bred... I guess.`);
-      score--;
+function answerThree() {
+  let answerThree = prompt('Did I go to College?').toLowerCase();
+  if (answerThree === 'yes' || answerThree === 'y') {
+    //console.log('Of course, I went to The Academy of Contemporary Music @ the University of Central Oklahoma. And yes, it is a mouthful.);
+    alert('Of course, I went to The Academy of Contemporary Music @ the University of Central Oklahoma. And yes, it is a mouthful.');
 
-}
-let answerFive = prompt('Do I like music?').toLowerCase();
-if (answerFive === 'yes' || answerFive === 'y') {
-      //console.log('Oh most definitely.');
-      alert('Oh most definitely.');
-
-} else {
-      alert(`Do you even shoegaze?`);
-      score--;
+  } else {
+    alert(`Nope, I am a learned individual.`);
+    score--;
+  }
 }
 
+answerThree();
+
+function answerFour() {
+  let answerFour = prompt('Did I live in Oklahoma?').toLowerCase();
+  if (answerFour === 'yes' || answerFour === 'y') {
+    //console.log('Yes. I don't recommend it.');
+    alert('Yes. I don\'t recommend it.');
+
+  } else {
+    alert(`Nope, I am sooner born and sooner bred... I guess.`);
+    score--;
+
+  }
+}
+answerFour();
+
+function answerFive() {
+  let answerFive = prompt('Do I like music?').toLowerCase();
+  if (answerFive === 'yes' || answerFive === 'y') {
+    //console.log('Oh most definitely.');
+    alert('Oh most definitely.');
+
+  } else {
+    alert(`Do you even shoegaze?`);
+    score--;
+  }
+
+}
+answerFive();
 
 function guessGame() {
-      let attemptsRemain = 3;
-      let bingo = 42;
-      let i;
-      for (i = 0; i <= attemptsRemain; i++) {
-            let numGame = prompt(`${user}, what number am I thinking? You have four guesses.`);
+  let attemptsRemain = 3;
+  let bingo = 42;
+  let i;
+  for (i = 0; i <= attemptsRemain; i++) {
+    let numGame = +prompt(`${user}, what number am I thinking? You have four guesses.`);
 
-            console.log(numGame)
-            console.log(i)
+    console.log(numGame)
+    console.log(i)
 
-            if (numGame == bingo) {
-                  alert('Bingo, you must have read my mind!');
-                  break;
+    if (numGame === bingo) {
+      alert('Bingo, you must have read my mind!');
+      break;
 
-            } else if (numGame > bingo) {
-                  alert(`That guess is too high ${user}. Try again`);
-                  //      attemptsRemain--;
-                  score--;
+    } else if (numGame > bingo) {
+      alert(`That guess is too high ${user}. Try again`);
+      //      attemptsRemain--;
+      score--;
 
-            } else if (numGame < bingo) {
-                  alert(`That guess is too low ${user}. Try again`);
-                  //      attemptsRemain--;
-                  score--;
+    } else if (numGame < bingo) {
+      alert(`That guess is too low ${user}. Try again`);
+      //      attemptsRemain--;
+      score--;
 
-            } if (i == 2) {
-                  alert('Hint: It is the answer to the ultimate question of life, the universe, and everything.');
+    } if (i === 2) {
+      alert('Hint: It is the answer to the ultimate question of life, the universe, and everything.');
 
-            } if (i == attemptsRemain) {
-                  alert(`Sorry ${user}. You are out of attempts. The number I was thinking was 42.`);
+    } if (i === attemptsRemain) {
+      alert(`Sorry ${user}. You are out of attempts. The number I was thinking was 42.`);
 
 
-            }
-      }
+    }
+  }
 }
 
 guessGame();
 
 
 function multGame() {
-      let attemptsRemain = 6;
-      let i;
-      for (i = 0; i <= attemptsRemain; i++) {
-            let multGame = prompt(`Okay ${user}, What musical note is representative of 440 hz?`).toUpperCase;
-            let notes = [`A`, `B`, `C`, `D`, `E`, `F`, `G`];
-            console.log(multGame);
+  let attemptsRemain = 6;
+  let i;
+  for (i = 0; i <= attemptsRemain; i++) {
+    let multGame = prompt(`Okay ${user}, What musical note is representative of 440 hz?`).toUpperCase();
+    let notes = [`C`, `D`, `E`, `F`, `G`, `A`, `B`];
+    //console.log(multGame);
 
-            if (multGame == notes[0]){
-                  alert(`Ahhh, that answer is like music to my ears.`);
-                  break;
-                  // } else if (multGame < notes[5]){
-                  //       alert(`Hmmm, that note is a little flat. Try again.`)
-                  //       score--;
-                  // } else if (multGame > notes[5]){
-                  //       alert(`That not is a little sharp. Try again.`)
-                  //       score--;
+    if (multGame === notes[5]) {
+      alert(`Ahhh, that answer is like music to my ears.`);
+      break;
+    } else if (multGame < notes[5]) {
+      alert(`Hmmm, that note is a little flat. Try again.`)
+      score--;
+    } else if (multGame > notes[5]) {
+      alert(`That not is a little sharp. Try again.`)
+      score--;
 
-
-
-
-
-            }
+    //if (attemptsRemain = 0){
+    //  alert(`The correct answer was A.`);
 
 
+    }
 
 
 
-      }
+  
+
+  }
 }
-multGame()
-
+multGame();
 
 console.log(score);
 
@@ -148,5 +166,5 @@ console.log(score);
 //}
 
 
-      //console.log('You must have read my mind!');
-      //if (answerSix === '42');
+//console.log('You must have read my mind!');
+//if (answerSix === '42');
