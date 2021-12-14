@@ -13,3 +13,9 @@ After all attempts have been exhausted, tell the user the correct answer. Consid
 
 - Changed css colors for asides.
 - Worked on new function multGame.
+- There is still a decent amount to refine and finish.
+-
+
+The CSS styling needs to be reformated to allow for proper structure. Will emplement new wireframe in the near future. 
+
+The game with multiple answers to the question still needs to return the correct answers at the end as well as the score count. 
